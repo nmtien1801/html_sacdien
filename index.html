@@ -210,8 +210,9 @@
 
       /* Hero Section */
       .hero {
-        background: linear-gradient(135deg, #0a5f4f, #0d8f6f);
-        color: #fff;
+        /* background: linear-gradient(135deg, #0a5f4f, #0d8f6f); */
+        background: #fff;
+        color: #0d8f6f;
         padding: 80px 0;
         position: relative;
         overflow: hidden;
@@ -249,9 +250,9 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
-        margin-top: -50px;
         position: relative;
         z-index: 10;
+        margin-bottom: 50px;
       }
 
       .feature-card {
@@ -291,6 +292,14 @@
         padding: 80px 0;
       }
 
+      #gioithieu {
+        background: linear-gradient(135deg, #0a5f4f, #0d8f6f);
+        color: #fff;
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
       .section-title {
         font-size: 36px;
         font-weight: 900;
@@ -299,6 +308,13 @@
         text-transform: uppercase;
       }
 
+      #section-title {
+        font-size: 36px;
+        font-weight: 900;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        color: #fff;
+      }
       /* Two Column Section */
       .two-column {
         display: grid;
@@ -753,23 +769,23 @@
       <div class="container">
         <div class="two-column">
           <div>
-            <h2 class="section-title">MÔ HÌNH & GIẢI PHÁP TRẠM ĐIỆN</h2>
+            <h2 id="section-title">MÔ HÌNH & GIẢI PHÁP TRẠM ĐIỆN</h2>
             <p style="margin-bottom: 20px; line-height: 1.8">
-              Nexergy cung cấp giải pháp toàn diện cho việc xây dựng và vận hành
-              trạm sạc xe điện. Với công nghệ tiên tiến và đội ngũ chuyên
-              nghiệp, chúng tôi cam kết mang đến:
+              Trạm sạc thông minh phiên bản Việt hóa, đầy đủ phần cứng, phần mềm
+              quản lý và ứng dụng thanh toán. Thiết kế an toàn với bao vệ 2 lớp
+              quá dòng, cân bằng điện áp & ổn định pin. Gọn nhẹ - dễ lắp đặt ở
+              bất kỳ đâu.
             </p>
-            <ul style="list-style: none; padding: 0">
-              <li style="padding: 10px 0; border-bottom: 1px solid #eee">
-                ✓ Thiết kế và lắp đặt trạm sạc chuyên nghiệp
+            <ul class="about-list active">
+              <li style="margin-bottom: 10px; line-height: 1.6">
+                Chi phí thấp & tiện lợi - chi từ 8,5 triệu/trạm (2 cổng).
               </li>
-              <li style="padding: 10px 0; border-bottom: 1px solid #eee">
-                ✓ Hệ thống quản lý và vận hành tự động
+              <li style="margin-bottom: 10px; line-height: 1.6">
+                Tài chính linh hoạt - kết hợp ngân hàng cho vay vốn nếu cần.
               </li>
-              <li style="padding: 10px 0; border-bottom: 1px solid #eee">
-                ✓ Bảo trì, bảo dưỡng định kỳ
+              <li style="margin-bottom: 10px; line-height: 1.6">
+                Sản xuất theo tiêu chuẩn ISO 9001.
               </li>
-              <li style="padding: 10px 0">✓ Hỗ trợ kỹ thuật 24/7</li>
             </ul>
           </div>
           <div>
