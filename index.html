@@ -716,6 +716,14 @@
           display: block !important;
         }
 
+        .app {
+          display: flex !important;
+        }
+        .app img{
+          height: 70px;
+          width: auto;
+        }
+
         .btn-register-app {
           display: block !important;
           background: #24b7a1;
@@ -817,20 +825,79 @@
       .btn-register-app {
         display: none;
       }
+
+      .app {
+        display: none;
+      }
     </style>
   </head>
   <body>
     <!-- Header -->
     <header>
       <div class="container">
-        <div class="header-content">
+        <div class="header-content app">
           <div class="menu-toggle">☰</div>
+          <div class="body-content-toggle">
+            <div class="header-top">
+              <!-- <div class="contact-info">
+                <div class="contact-label">TƯ VẤN VÀ CSKH</div>
+                <div class="contact-number">📞 0914.77.88.99</div>
+              </div> -->
+              <!-- <div class="search-container">
+                <input
+                  type="text"
+                  class="search-box"
+                  placeholder="Nhập từ khóa cần tìm"
+                />
+                <span class="search-icon">🔍</span>
+              </div>
+              <div class="language-switcher">
+                <span class="active">VN</span>
+                <span>|</span>
+                <span>EN</span>
+              </div> -->
+            </div>
+            <div
+              class="header-bottom"
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                margin-top: 10px;
+              "
+            >
+              <nav>
+                <ul>
+                  <li>
+                    <a id="giaipham" class="active hover-menu">Giải pháp</a>
+                  </li>
+                  <li><a id="visao" class="hover-menu">Lý do (Vì sao)</a></li>
+                  <li><a id="loiich" class="hover-menu">Lợi ích</a></li>
+                  <li><a id="doanhthu" class="hover-menu">Doanh thu</a></li>
+                  <li><a id="hoptac" class="hover-menu">Hợp tác</a></li>
+                  <li><a id="maulapdat" class="hover-menu">Mẫu lắp đặt</a></li>
+                  <li><a id="camnhan" class="hover-menu">Cảm nhận</a></li>
+                  <li><a id="lienhe" class="hover-menu">Liên hệ</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
           <div class="logo">
             <a href="#">
-              <img src="./images/logo.png"/>
+              <img src="./images/logo.png" />
             </a>
           </div>
-          <div class="body-content web">
+          <button class="btn-register-app">Đăng ký</button>
+        </div>
+
+        <div class="header-content web">
+          <div class="logo">
+            <a href="#">
+              <img src="./images/logo.png" />
+            </a>
+          </div>
+          <div class="body-content">
             <div class="header-top">
               <div class="contact-info">
                 <div class="contact-label">TƯ VẤN VÀ CSKH</div>
@@ -876,7 +943,6 @@
               <button class="btn-register register">Đăng ký hợp tác</button>
             </div>
           </div>
-          <button class="btn-register-app">Đăng ký</button>
         </div>
       </div>
     </header>
@@ -1401,6 +1467,36 @@
             langSwitcher.forEach((item) => item.classList.remove("active"));
             this.classList.add("active");
           });
+        });
+
+        const menuToggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector("nav ul");
+
+        menuToggle.addEventListener("click", function () {
+          // Nếu menu đang ẩn thì hiện, ngược lại thì ẩn
+          nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+
+          // Thêm hiệu ứng trượt mượt hơn
+          nav.style.flexDirection = "column";
+          nav.style.background = "#0a5f4f";
+          nav.style.position = "absolute";
+          nav.style.top = "80px";
+          nav.style.left = "0";
+          nav.style.width = "100%";
+          nav.style.padding = "20px 0";
+          nav.style.gap = "15px";
+          nav.style.textAlign = "center";
+          nav.style.transition = "all 0.3s ease";
+          nav.style.zIndex = "999";
+        });
+      });
+
+      const menuLinks = document.querySelectorAll("nav ul li a");
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 768) {
+            nav.style.display = "none";
+          }
         });
       });
 
