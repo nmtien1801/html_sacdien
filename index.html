@@ -377,18 +377,6 @@
         text-transform: uppercase;
         color: #fff;
       }
-      /* Two Column Section */
-      .two-column {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-        align-items: center;
-      }
-
-      .two-column img {
-        width: 100%;
-        border-radius: 10px;
-      }
 
       /* Benefits Grid */
       .benefits-grid {
@@ -461,12 +449,6 @@
         grid-template-columns: 1fr 1fr;
         gap: 50px;
         align-items: start;
-      }
-
-      .pricing-list {
-        background: #fff;
-        padding: 40px;
-        border-radius: 10px;
       }
 
       .pricing-item {
@@ -668,7 +650,6 @@
 
       @media (max-width: 768px) {
         .hero-content,
-        .two-column,
         .pricing-grid,
         .bg-blur,
         .service-content,
@@ -684,6 +665,27 @@
 
         nav ul {
           display: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 5px;
+        }
+        .hero-text h1 {
+          font-size: 28px;
+        }
+        .hero-subtitle {
+          font-size: 18px;
+        }
+        .btn-primary,
+        .btn-register {
+          padding: 10px 10px;
+          font-size: 14px;
+        }
+        .footer-logo img {
+          width: 100px;
+          height: 100px;
         }
       }
 
@@ -902,7 +904,7 @@
               quá dòng, cân bằng điện áp & ổn định pin. Gọn nhẹ - dễ lắp đặt ở
               bất kỳ đâu.
             </p>
-            <ul class="about-list active">
+            <ul class="">
               <li style="margin-bottom: 10px; line-height: 1.6">
                 Chi phí thấp & tiện lợi - chi từ 8,5 triệu/trạm (2 cổng).
               </li>
@@ -1230,13 +1232,11 @@
               <div class="social-icon">ig</div>
             </div>
           </div>
-          <div class="footer-image">
-            <img
-              src="./images/1_Giaiphap.jpg"
-              alt="Footer Image"
-              style="width: 100%; border-radius: 10px"
-            />
-          </div>
+          <img
+            src="./images/1_Giaiphap.jpg"
+            alt="Footer Image"
+            style="width: 100%; border-radius: 10px"
+          />
           <div class="footer-form">
             <h3>Đăng ký nhận tư vấn</h3>
             <p style="margin-bottom: 20px; opacity: 0.9">
