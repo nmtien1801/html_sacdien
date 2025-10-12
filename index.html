@@ -80,7 +80,6 @@
       /* Header */
       header {
         background: #0a5f4f;
-        padding: 15px 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         position: sticky;
         top: 0;
@@ -724,6 +723,12 @@
           width: auto;
         }
 
+        .header-bottom {
+          display: flex;
+          flex-direction: column !important;
+          gap: 15px;
+        }
+
         .btn-register-app {
           display: block !important;
           background: #24b7a1;
@@ -836,34 +841,48 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-          <div class="logo">
-            <a href="#">
-              <img src="./images/logo.png" />
-            </a>
-          </div>
-          <div class="body-content">
-            <div class="header-top">
-              <div class="contact-info">
-                <div class="contact-label">TƯ VẤN VÀ CSKH</div>
-                <div class="contact-number">📞 0914.77.88.99</div>
-              </div>
-              <div class="search-container">
-                <input
-                  type="text"
-                  class="search-box"
-                  placeholder="Nhập từ khóa cần tìm"
-                />
-                <span class="search-icon">🔍</span>
-              </div>
-              <div class="language-switcher">
-                <span class="active">VN</span>
-                <span>|</span>
-                <span>EN</span>
-              </div>
+          <div class="d-flex align-items-center w-100 header-content">
+            <div class="logo">
+              <a href="#">
+                <img src="./images/logo.png" />
+              </a>
             </div>
-            <div class="header-bottom" style="gap: 30px; margin-top: 10px">
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="d-flex flex-column w-100">
+              <div class="header-top p-2">
+                <div class="contact-info">
+                  <div class="contact-label">TƯ VẤN VÀ CSKH</div>
+                  <div class="contact-number">📞 0914.77.88.99</div>
+                </div>
+                <div class="search-container">
+                  <input
+                    type="text"
+                    class="search-box"
+                    placeholder="Nhập từ khóa cần tìm"
+                  />
+                  <span class="search-icon">🔍</span>
+                </div>
+                <div class="language-switcher">
+                  <span class="active">VN</span>
+                  <span>|</span>
+                  <span>EN</span>
+                </div>
+              </div>
+              <div
+                class="header-bottom d-flex"
+                style="gap: 30px; margin-top: 10px"
+              >
+                <ul class="navbar-nav">
                   <li class="nav-item">
                     <a id="giaipham" class="active hover-menu">Giải pháp</a>
                   </li>
@@ -877,20 +896,12 @@
                   <li><a id="camnhan" class="hover-menu">Cảm nhận</a></li>
                   <li><a id="lienhe" class="hover-menu">Liên hệ</a></li>
                 </ul>
-                <button class="btn-register register" style="margin-left: 24px">
+                <button class="btn-register register">
                   Đăng ký hợp tác
                 </button>
               </div>
             </div>
           </div>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
         </div>
       </nav>
     </header>
@@ -1397,7 +1408,7 @@
       // active menu
       document.addEventListener("DOMContentLoaded", function () {
         // Xử lý menu header-bottom
-        const menuLinks = document.querySelectorAll(".header-bottom nav a");
+        const menuLinks = document.querySelectorAll(".header-bottom ul a");
         menuLinks.forEach((link) => {
           link.addEventListener("click", function () {
             menuLinks.forEach((item) => item.classList.remove("active"));
