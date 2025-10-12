@@ -834,82 +834,8 @@
   <body>
     <!-- Header -->
     <header>
-      <div class="container">
-        <div class="header-content app">
-          <!-- Nút mở menu -->
-          <div
-            class="menu-toggle btn btn-primary"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasMenu"
-          >
-            ☰
-          </div>
-
-          <!-- Offcanvas menu -->
-          <div
-            class="offcanvas offcanvas-start"
-            tabindex="-1"
-            id="offcanvasMenu"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-              ></button>
-            </div>
-
-            <div class="offcanvas-body">
-              <!-- Search box -->
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Nhập từ khóa cần tìm"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-secondary" type="button">
-                  🔍
-                </button>
-              </div>
-
-              <!-- Menu links -->
-              <a class="btn btn-outline-primary w-100 mb-2" id="giaipham"
-                >Giải pháp</a
-              >
-              <a class="btn btn-outline-primary w-100 mb-2" id="visao"
-                >Lý do (Vì sao)</a
-              >
-              <a class="btn btn-outline-primary w-100 mb-2" id="loiich"
-                >Lợi ích</a
-              >
-              <a class="btn btn-outline-primary w-100 mb-2" id="doanhthu"
-                >Doanh thu</a
-              >
-              <a class="btn btn-outline-primary w-100 mb-2" id="hoptac"
-                >Hợp tác</a
-              >
-              <a class="btn btn-outline-primary w-100 mb-2" id="maulapdat"
-                >Mẫu lắp đặt</a
-              >
-              <a class="btn btn-outline-primary w-100 mb-2" id="camnhan"
-                >Cảm nhận</a
-              >
-              <a class="btn btn-outline-primary w-100 mb-2" id="lienhe"
-                >Liên hệ</a
-              >
-            </div>
-          </div>
-          <div class="logo">
-            <a href="#">
-              <img src="./images/logo.png" />
-            </a>
-          </div>
-          <button class="btn-register-app">Đăng ký</button>
-        </div>
-
-        <div class="header-content web">
+      <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
           <div class="logo">
             <a href="#">
               <img src="./images/logo.png" />
@@ -935,34 +861,38 @@
                 <span>EN</span>
               </div>
             </div>
-            <div
-              class="header-bottom"
-              style="
-                display: flex;
-                align-items: center;
-                gap: 30px;
-                margin-top: 10px;
-              "
-            >
-              <nav>
-                <ul>
-                  <li>
+            <div class="header-bottom" style="gap: 30px; margin-top: 10px">
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
                     <a id="giaipham" class="active hover-menu">Giải pháp</a>
                   </li>
                   <li><a id="visao" class="hover-menu">Lý do (Vì sao)</a></li>
                   <li><a id="loiich" class="hover-menu">Lợi ích</a></li>
                   <li><a id="doanhthu" class="hover-menu">Doanh thu</a></li>
                   <li><a id="hoptac" class="hover-menu">Hợp tác</a></li>
-                  <li><a id="maulapdat" class="hover-menu">Mẫu lắp đặt</a></li>
+                  <li>
+                    <a id="maulapdat" class="hover-menu">Mẫu lắp đặt</a>
+                  </li>
                   <li><a id="camnhan" class="hover-menu">Cảm nhận</a></li>
                   <li><a id="lienhe" class="hover-menu">Liên hệ</a></li>
                 </ul>
-              </nav>
-              <button class="btn-register register">Đăng ký hợp tác</button>
+                <button class="btn-register register" style="margin-left: 24px">
+                  Đăng ký hợp tác
+                </button>
+              </div>
             </div>
           </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-      </div>
+      </nav>
     </header>
 
     <!-- Hero Section -->
