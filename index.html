@@ -836,51 +836,69 @@
     <header>
       <div class="container">
         <div class="header-content app">
-          <div class="menu-toggle">☰</div>
-          <div class="body-content-toggle">
-            <!-- <div class="header-top">
-              <div class="contact-info">
-                <div class="contact-label">TƯ VẤN VÀ CSKH</div>
-                <div class="contact-number">📞 0914.77.88.99</div>
-              </div>
-              <div class="search-container">
+          <!-- Nút mở menu -->
+          <div
+            class="menu-toggle btn btn-primary"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasMenu"
+          >
+            ☰
+          </div>
+
+          <!-- Offcanvas menu -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasMenu"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <!-- Search box -->
+              <div class="input-group mb-3">
                 <input
                   type="text"
-                  class="search-box"
+                  class="form-control"
                   placeholder="Nhập từ khóa cần tìm"
+                  aria-label="Search"
                 />
-                <span class="search-icon">🔍</span>
+                <button class="btn btn-outline-secondary" type="button">
+                  🔍
+                </button>
               </div>
-              <div class="language-switcher">
-                <span class="active">VN</span>
-                <span>|</span>
-                <span>EN</span>
-              </div>
-            </div> -->
-            <div
-              class="header-bottom"
-              style="
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 30px;
-                margin-top: 10px;
-              "
-            >
-              <nav>
-                <ul>
-                  <li>
-                    <a id="giaipham" class="active hover-menu">Giải pháp</a>
-                  </li>
-                  <li><a id="visao" class="hover-menu">Lý do (Vì sao)</a></li>
-                  <li><a id="loiich" class="hover-menu">Lợi ích</a></li>
-                  <li><a id="doanhthu" class="hover-menu">Doanh thu</a></li>
-                  <li><a id="hoptac" class="hover-menu">Hợp tác</a></li>
-                  <li><a id="maulapdat" class="hover-menu">Mẫu lắp đặt</a></li>
-                  <li><a id="camnhan" class="hover-menu">Cảm nhận</a></li>
-                  <li><a id="lienhe" class="hover-menu">Liên hệ</a></li>
-                </ul>
-              </nav>
+
+              <!-- Menu links -->
+              <a class="btn btn-outline-primary w-100 mb-2" id="giaipham"
+                >Giải pháp</a
+              >
+              <a class="btn btn-outline-primary w-100 mb-2" id="visao"
+                >Lý do (Vì sao)</a
+              >
+              <a class="btn btn-outline-primary w-100 mb-2" id="loiich"
+                >Lợi ích</a
+              >
+              <a class="btn btn-outline-primary w-100 mb-2" id="doanhthu"
+                >Doanh thu</a
+              >
+              <a class="btn btn-outline-primary w-100 mb-2" id="hoptac"
+                >Hợp tác</a
+              >
+              <a class="btn btn-outline-primary w-100 mb-2" id="maulapdat"
+                >Mẫu lắp đặt</a
+              >
+              <a class="btn btn-outline-primary w-100 mb-2" id="camnhan"
+                >Cảm nhận</a
+              >
+              <a class="btn btn-outline-primary w-100 mb-2" id="lienhe"
+                >Liên hệ</a
+              >
             </div>
           </div>
           <div class="logo">
