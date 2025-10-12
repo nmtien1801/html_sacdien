@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Nexergy - Giải pháp trạm sạc xe điện thông minh</title>
     <style>
       /* --------------------------------- Toàn trang dùng font này */
@@ -94,8 +99,8 @@
       }
 
       .logo img {
-        height: 90px !important;
-        width: auto !important;
+        height: 90px;
+        width: auto;
       }
 
       .contact-info {
@@ -297,6 +302,7 @@
         gap: 20px;
         position: relative;
         z-index: 10;
+        transition: transform 0.3s ease, gap 0.3s ease;
       }
 
       .feature-card {
@@ -306,6 +312,8 @@
         text-align: center;
         display: flex;
         align-items: center;
+        padding: 10px 5px;
+        transition: transform 0.3s ease, padding 0.3s ease;
       }
 
       .feature-icon {
@@ -319,17 +327,22 @@
         margin: 15px;
         color: #fff;
         font-size: 28px;
+        flex-shrink: 0;
+        transition: width 0.3s ease, height 0.3s ease;
       }
 
       .feature-card h3 {
         color: #0a5f4f;
         font-size: 16px;
-        margin-bottom: 10px;
+        margin-bottom: 6px;
+        transition: font-size 0.3s ease;
       }
 
       .feature-card p {
         font-size: 14px;
         color: #666;
+        margin: 0;
+        transition: font-size 0.3s ease;
       }
 
       /* Section Common */
@@ -647,11 +660,31 @@
         border-top: 1px solid rgba(255, 255, 255, 0.2);
         font-size: 14px;
       }
+      @media (max-width: 992px) {
+        .features-grid {
+          gap: 15px;
+          transform: scale(0.95);
+        }
+
+        .feature-icon {
+          width: 50px;
+          height: 50px;
+          font-size: 22px;
+          margin: 10px;
+        }
+
+        .feature-card h3 {
+          font-size: 15px;
+        }
+
+        .feature-card p {
+          font-size: 13px;
+        }
+      }
 
       @media (max-width: 768px) {
         .hero-content,
         .pricing-grid,
-        .bg-blur,
         .service-content,
         .footer-content {
           grid-template-columns: 1fr;
@@ -660,7 +693,41 @@
         .features-grid,
         .benefits-grid,
         .commitment-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        #gioithieu {
           grid-template-columns: 1fr;
+        }
+
+        .bg-blur {
+          grid-template-columns: 1fr !important;
+        }
+
+        .bg-blur .process-card {
+          font-size: 14px !important;
+        }
+
+        .web {
+          display: none !important;
+        }
+
+        .menu-toggle {
+          display: block !important;
+        }
+
+        .btn-register-app {
+          display: block !important;
+          background: #24b7a1;
+          color: #fff;
+          padding: 8px 23px;
+          border: none;
+          border-radius: 20px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s;
+          font-size: 12px;
+          white-space: nowrap;
         }
 
         nav ul {
@@ -739,6 +806,17 @@
       .hover-menu:hover {
         cursor: pointer;
       }
+
+      .menu-toggle {
+        display: none;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .btn-register-app {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -746,12 +824,13 @@
     <header>
       <div class="container">
         <div class="header-content">
+          <div class="menu-toggle">☰</div>
           <div class="logo">
             <a href="#">
-              <img src="./images/logo.png" style="height: 60px; width: 60px" />
+              <img src="./images/logo.png"/>
             </a>
           </div>
-          <div class="body-content">
+          <div class="body-content web">
             <div class="header-top">
               <div class="contact-info">
                 <div class="contact-label">TƯ VẤN VÀ CSKH</div>
@@ -797,6 +876,7 @@
               <button class="btn-register register">Đăng ký hợp tác</button>
             </div>
           </div>
+          <button class="btn-register-app">Đăng ký</button>
         </div>
       </div>
     </header>
@@ -815,15 +895,13 @@
               Trạm sạc xe điện sẵn sàng lắp đầy mọi điểm nóng đô thị
             </p>
             <button
-              class="btn-primary register"
-              style="font-size: 16px; padding: 15px 40px"
+              type="button"
+              class="btn-primary register px-3 py-2 fw-semibold"
             >
               Đăng ký hợp tác ngay
             </button>
-            <button
-              class="btn-primary"
-              style="font-size: 16px; padding: 15px 40px"
-            >
+
+            <button type="button" class="btn-primary px-3 py-2 fw-semibold">
               Xem doanh thu mẫu
             </button>
           </div>
@@ -961,7 +1039,7 @@
     <!-- Process Section -->
     <section class="section">
       <div class="container">
-        <div class="bg-blur benefit">
+        <div class="bg-blur">
           <div class="process-cards">
             <div class="process-card">
               <div class="process-number">01</div>
@@ -1415,6 +1493,13 @@
           el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
           observer.observe(el);
         });
+
+      // mở menu trên mobile
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav ul");
+      toggle.addEventListener("click", () => {
+        nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+      });
     </script>
   </body>
 </html>
