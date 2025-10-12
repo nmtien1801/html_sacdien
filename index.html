@@ -719,7 +719,7 @@
         .app {
           display: flex !important;
         }
-        .app img{
+        .app img {
           height: 70px;
           width: auto;
         }
@@ -838,12 +838,12 @@
         <div class="header-content app">
           <div class="menu-toggle">☰</div>
           <div class="body-content-toggle">
-            <div class="header-top">
-              <!-- <div class="contact-info">
+            <!-- <div class="header-top">
+              <div class="contact-info">
                 <div class="contact-label">TƯ VẤN VÀ CSKH</div>
                 <div class="contact-number">📞 0914.77.88.99</div>
-              </div> -->
-              <!-- <div class="search-container">
+              </div>
+              <div class="search-container">
                 <input
                   type="text"
                   class="search-box"
@@ -855,8 +855,8 @@
                 <span class="active">VN</span>
                 <span>|</span>
                 <span>EN</span>
-              </div> -->
-            </div>
+              </div>
+            </div> -->
             <div
               class="header-bottom"
               style="
@@ -1105,7 +1105,7 @@
     <!-- Process Section -->
     <section class="section">
       <div class="container">
-        <div class="bg-blur">
+        <div class="bg-blur benefit">
           <div class="process-cards">
             <div class="process-card">
               <div class="process-number">01</div>
@@ -1468,36 +1468,6 @@
             this.classList.add("active");
           });
         });
-
-        const menuToggle = document.querySelector(".menu-toggle");
-        const nav = document.querySelector("nav ul");
-
-        menuToggle.addEventListener("click", function () {
-          // Nếu menu đang ẩn thì hiện, ngược lại thì ẩn
-          nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-
-          // Thêm hiệu ứng trượt mượt hơn
-          nav.style.flexDirection = "column";
-          nav.style.background = "#0a5f4f";
-          nav.style.position = "absolute";
-          nav.style.top = "80px";
-          nav.style.left = "0";
-          nav.style.width = "100%";
-          nav.style.padding = "20px 0";
-          nav.style.gap = "15px";
-          nav.style.textAlign = "center";
-          nav.style.transition = "all 0.3s ease";
-          nav.style.zIndex = "999";
-        });
-      });
-
-      const menuLinks = document.querySelectorAll("nav ul li a");
-      menuLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          if (window.innerWidth <= 768) {
-            nav.style.display = "none";
-          }
-        });
       });
 
       // Smooth scroll
@@ -1589,13 +1559,6 @@
           el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
           observer.observe(el);
         });
-
-      // mở menu trên mobile
-      const toggle = document.querySelector(".menu-toggle");
-      const nav = document.querySelector("nav ul");
-      toggle.addEventListener("click", () => {
-        nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-      });
     </script>
   </body>
 </html>
