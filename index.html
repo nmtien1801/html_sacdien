@@ -5,7 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nexergy - Giải pháp trạm sạc xe điện thông minh</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+      /* --------------------------------- Toàn trang dùng font này */
+      @font-face {
+        font-family: "UTM Impact";
+        src: url("../UTM\ Impact.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Helvetica Bold";
+        src: url("../helvetica-255/Helvetica-Bold.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Helvetica Bold Oblique";
+        src: url("../helvetica-255/Helvetica-BoldOblique.ttf")
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Helvetica Compressed";
+        src: url("../helvetica-255/helvetica-compressed-5871d14b6903a.otf")
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Helvetica Light";
+        src: url("../helvetica-255/helvetica-light-587ebe5a59211.ttf")
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Helvetica Oblique";
+        src: url("../helvetica-255/Helvetica-Oblique.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "Helvetica Rounded Bold";
+        src: url("../helvetica-255/helvetica-rounded-bold-5871d05ead8de.otf")
+          format("truetype");
+      }
+      @font-face {
+        font-family: "Helvetica";
+        src: url("../helvetica-255/Helvetica.ttf") format("truetype");
+      }
+      /* ----------------------------------------------------------------- */
 
       * {
         margin: 0;
@@ -14,20 +61,20 @@
       }
 
       body {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: "Helvetica", sans-serif;
         color: #333;
         overflow-x: hidden;
       }
 
       .container {
-        max-width: 1200px;
+        max-width: 1600px;
         margin: 0 auto;
         padding: 0 20px;
       }
 
       /* Header */
       header {
-        background: #127a6b;
+        background: #0a5f4f;
         padding: 15px 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         position: sticky;
@@ -47,8 +94,8 @@
       }
 
       .logo img {
-        height: 60px;
-        width: auto;
+        height: 90px !important;
+        width: auto !important;
       }
 
       .contact-info {
@@ -175,7 +222,7 @@
       }
 
       .btn-primary {
-        background: #127a6b;
+        background: #0a5f4f;
         color: #fff;
         padding: 10px 25px;
         border: none;
@@ -210,7 +257,7 @@
       /* Hero Section */
       .hero {
         background: #fff;
-        color: #0d8f6f;
+        color: #0a5f4f;
         padding: 20px 0;
         position: relative;
         overflow: hidden;
@@ -225,9 +272,8 @@
       }
 
       .hero-text h1 {
-        font-size: 48px;
-        font-weight: 900;
-        line-height: 1.2;
+        font-family: "UTM Impact", sans-serif;
+        font-size: 52px;
         margin-bottom: 20px;
         text-transform: uppercase;
       }
@@ -299,12 +345,13 @@
 
         background-image: linear-gradient(
             to right,
-            rgba(18, 122, 107, 1) 0%,
-            /* Bắt đầu xanh đặc */ rgba(18, 122, 107, 1) 50%,
-            /* Giữ đậm đến giữa */ rgba(18, 122, 107, 0) 100%
+            rgba(10, 95, 79, 1) 0%,
+            /* #0a5f4f — bắt đầu đậm */ rgba(10, 95, 79, 1) 30%,
+            /* Giữ đậm đến 30% */ rgba(10, 95, 79, 0) 100%
               /* Mờ dần sang trong suốt */
           ),
           url("./images/Mohinh_1.png");
+
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -316,16 +363,16 @@
       }
 
       .section-title {
-        font-size: 36px;
-        font-weight: 900;
+        font-family: "Helvetica", sans-serif;
+        font-size: 35px;
         color: #0a5f4f;
         margin-bottom: 30px;
         text-transform: uppercase;
       }
 
       #section-title {
+        font-family: "Helvetica", sans-serif;
         font-size: 36px;
-        font-weight: 900;
         margin-bottom: 30px;
         text-transform: uppercase;
         color: #fff;
@@ -527,7 +574,6 @@
         justify-content: center;
         align-items: center;
         gap: 40px;
-        padding: 40px 0;
         flex-wrap: wrap;
       }
 
@@ -560,18 +606,6 @@
         display: flex;
         align-items: center;
         gap: 10px;
-      }
-
-      .footer-logo-icon {
-        width: 50px;
-        height: 50px;
-        background: #ff8c00;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 28px;
-        font-weight: bold;
       }
 
       .footer-form {
@@ -648,10 +682,6 @@
           grid-template-columns: 1fr;
         }
 
-        .hero-text h1 {
-          font-size: 32px;
-        }
-
         nav ul {
           display: none;
         }
@@ -684,8 +714,8 @@
       }
 
       .section-title-customer {
+        font-family: "Helvetica", sans-serif;
         font-size: 24px;
-        font-weight: 900;
         color: #0a5f4f;
         margin-bottom: 30px;
         text-transform: uppercase;
@@ -703,6 +733,10 @@
         font-size: 13px;
         white-space: nowrap;
       }
+
+      .hover-menu:hover {
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -712,7 +746,7 @@
         <div class="header-content">
           <div class="logo">
             <a href="#">
-              <img src="logo.png" style="height: 60px; width: 60px" />
+              <img src="./images/logo.png" style="height: 60px; width: 60px" />
             </a>
           </div>
           <div class="body-content">
@@ -746,13 +780,16 @@
             >
               <nav>
                 <ul>
-                  <li><a href="#giaipham">Giải pháp</a></li>
-                  <li><a href="#visao">Lý do (Vì sao)</a></li>
-                  <li><a href="#loiich">Lợi ích</a></li>
-                  <li><a href="#doanhthu" class="active">Doanh thu</a></li>
-                  <li><a href="#hoptac">Hợp tác</a></li>
-                  <li><a href="#maulapdat">Mẫu lắp đặt</a></li>
-                  <li><a href="#lienhe">Liên hệ</a></li>
+                  <li>
+                    <a id="giaipham" class="active hover-menu">Giải pháp</a>
+                  </li>
+                  <li><a id="visao" class="hover-menu">Lý do (Vì sao)</a></li>
+                  <li><a id="loiich" class="hover-menu">Lợi ích</a></li>
+                  <li><a id="doanhthu" class="hover-menu">Doanh thu</a></li>
+                  <li><a id="hoptac" class="hover-menu">Hợp tác</a></li>
+                  <li><a id="maulapdat" class="hover-menu">Mẫu lắp đặt</a></li>
+                  <li><a id="camnhan" class="hover-menu">Cảm nhận</a></li>
+                  <li><a id="lienhe" class="hover-menu">Liên hệ</a></li>
                 </ul>
               </nav>
               <button class="btn-register register">Đăng ký hợp tác</button>
@@ -858,7 +895,7 @@
       <div class="container">
         <div id="gioithieu">
           <div>
-            <h2 id="section-title">MÔ HÌNH & GIẢI PHÁP TRẠM ĐIỆN</h2>
+            <h2 id="section-title">MÔ HÌNH & GIẢI PHÁP TOÀN DIỆN</h2>
             <p style="margin-bottom: 20px; line-height: 1.8">
               Trạm sạc thông minh phiên bản Việt hóa, đầy đủ phần cứng, phần mềm
               quản lý và ứng dụng thanh toán. Thiết kế an toàn với bao vệ 2 lớp
@@ -884,7 +921,7 @@
     <!-- Benefits Section -->
     <section class="section" style="background: #f9f9f9">
       <div class="container">
-        <h2 class="section-title">VÌ SAO NÊN ĐẦU TƯ TRẠM NGAY BÂY GIỜ?</h2>
+        <h2 class="section-title why">VÌ SAO NÊN ĐẦU TƯ TRẠM NGAY BÂY GIỜ?</h2>
         <div class="benefits-grid">
           <div class="benefit-card">
             <div class="number">
@@ -922,7 +959,7 @@
     <!-- Process Section -->
     <section class="section">
       <div class="container">
-        <div class="bg-blur">
+        <div class="bg-blur benefit">
           <div class="process-cards">
             <div class="process-card">
               <div class="process-number">01</div>
@@ -1035,10 +1072,7 @@
             <p>Khảo sát & hoàn thiện trong ~3 ngày kể từ khi chốt đơn.</p>
           </div>
           <div class="commitment-card">
-            <img
-              src="./icon/7.png"
-              style="margin-bottom: 15px"
-            />
+            <img src="./icon/7.png" style="margin-bottom: 15px" />
             <h3>ĐÀO TẠO VÀ HƯỚNG DẪN</h3>
             <p>Đào tạo nhân viên, cung cấp tài liệu hướng dẫn sử dụng</p>
           </div>
@@ -1052,10 +1086,7 @@
             <p>1 đổi 1 năm đầu; kiểm tra định kỳ 3 tháng/lần; hỗ trợ 24/7.</p>
           </div>
           <div class="commitment-card">
-            <img
-              src="./icon/9.png"
-              style="margin-bottom: 15px"
-            />
+            <img src="./icon/9.png" style="margin-bottom: 15px" />
             <h3>TRUYỀN THÔNG</h3>
             <p>Hỗ trợ truyền thông, khuyễn mãi khai trương để kéo khách</p>
           </div>
@@ -1147,10 +1178,6 @@
     <section class="testimonials">
       <div class="container">
         <h2 class="testimonial-title">Cảm nhận từ khách hàng</h2>
-        <p style="color: #666; max-width: 800px; margin: 0 auto 40px">
-          Hơn 500+ đối tác tin tưởng và đầu tư cùng Nexergy trên toàn quốc.
-          Doanh thu trung bình tăng 250% sau 6 tháng vận hành.
-        </p>
         <div class="testimonial-avatars">
           <div class="avatar"></div>
           <div class="avatar"></div>
@@ -1158,6 +1185,12 @@
           <div class="avatar"></div>
           <div class="avatar"></div>
         </div>
+        <p style="color: #0a5f4f; max-width: 800px; margin: 10px auto">
+          Trạm sạc Nexergy luôn mang đến sự an tâm và tin tưởng tuyệt đối cho
+          cửa hàng tôi. Cảm ơn Trạm sạc đã có những ý tưởng cho sản phẩm hơn cả
+          mong đợi, tôi rất hài lòng và luôn đặt trọn niềm tin.
+        </p>
+        <p style="color: #0a5f4f; font-weight: 600">Chị Hà - Gò Vấp, TP. HCM</p>
       </div>
     </section>
 
@@ -1174,20 +1207,16 @@
         <div class="footer-content">
           <div class="footer-logo-section">
             <div class="footer-logo">
-              <div class="footer-logo-icon">N</div>
-              <div>
-                <div style="font-size: 24px; font-weight: 700">NEXERGY</div>
-              </div>
+              <img
+                src="./images/logo.png"
+                style="height: 200px; width: 200px"
+              />
             </div>
-            <div style="font-size: 14px; opacity: 0.8">
-              GIẢI PHÁP CHO TRẠM SẠC XE ĐIỆN
-            </div>
+            <div style="font-size: 18px">GIẢI PHÁP CHO TRẠM SẠC XE ĐIỆN</div>
             <div>
-              <p style="line-height: 1.6; margin-bottom: 15px">
-                <strong>Địa chỉ:</strong><br />
+              <p style="line-height: 1.9; margin-bottom: 15px; font-size: 12px">
                 93/9/45 Bờ Bao Tân Thắng, Phường Sơn Kỳ, Quận Tân Phú, TP. HCM
-              </p>
-              <p style="line-height: 1.6; margin-bottom: 15px">
+                <br />
                 <strong>Hotline:</strong> 0914 77 88 99 (zalo)<br />
                 <strong>Website:</strong> nexegy.vn<br />
                 <strong>Email:</strong> cskh_nexegy@gmail.com
@@ -1273,6 +1302,30 @@
     </footer>
 
     <script>
+      // active menu
+      document.addEventListener("DOMContentLoaded", function () {
+        // Xử lý menu header-bottom
+        const menuLinks = document.querySelectorAll(".header-bottom nav a");
+        menuLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            menuLinks.forEach((item) => item.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+
+        // Xử lý chuyển ngôn ngữ (VN | EN)
+        const langSwitcher = document.querySelectorAll(
+          ".language-switcher span"
+        );
+        langSwitcher.forEach((span) => {
+          span.addEventListener("click", function () {
+            if (this.textContent.trim() === "|") return;
+            langSwitcher.forEach((item) => item.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+      });
+
       // Smooth scroll
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
@@ -1292,6 +1345,40 @@
         });
       });
 
+      // khi bấm nút "giải pháp" thì cuộn tới đầu trang (hero)
+      document.getElementById("giaipham").addEventListener("click", () => {
+        const hero = document.querySelector(".hero");
+        hero.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      document.getElementById("visao").addEventListener("click", () => {
+        const section = document.querySelector(".why");
+        section.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      document.getElementById("loiich").addEventListener("click", () => {
+        const section = document.querySelector(".benefit");
+        section.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      document.getElementById("doanhthu").addEventListener("click", () => {
+        const section = document.querySelector(".pricing-section");
+        section.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      document.getElementById("hoptac").addEventListener("click", () => {
+        const section = document.querySelector(".bg-Commitment");
+        section.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      document.getElementById("maulapdat").addEventListener("click", () => {
+        const section = document.querySelector(".barrier-section");
+        section.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      document.getElementById("camnhan").addEventListener("click", () => {
+        const section = document.querySelector(".testimonials");
+        section.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      document.getElementById("lienhe").addEventListener("click", () => {
+        const footer = document.querySelector("footer");
+        footer.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+
       // Form submission
       document
         .querySelector("footer form")
@@ -1303,7 +1390,7 @@
           this.reset();
         });
 
-      // Add animation on scroll
+      // -------------------------------- Add animation on scroll
       const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
