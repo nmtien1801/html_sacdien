@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hướng Dẫn Sử Dụng App Next Energy</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <style>
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: #f8f9fc;
+        color: #2d3748;
+        line-height: 1.7;
+      }
+
+      .container {
+        max-width: 900px;
+      }
+
+      .step-container {
+        background: white;
+        border-radius: 20px;
+        padding: 35px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        border: 1px solid #e8eaf0;
+      }
+
+      .step-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 25px;
+      }
+
+      .step-number {
+        width: 45px;
+        height: 45px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      .step-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin: 0;
+      }
+
+      .step-content {
+        font-size: 1.05rem;
+        color: #4a5568;
+        margin-bottom: 25px;
+      }
+
+      .step-content strong {
+        color: #2d3748;
+        font-weight: 600;
+      }
+
+      .screenshot-container {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .screenshot-box {
+        flex: 1;
+        min-width: 200px;
+        background: #f7fafc;
+        border: 2px dashed #cbd5e0;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        aspect-ratio: 9/16;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .screenshot-box i {
+        font-size: 3rem;
+        color: #a0aec0;
+        margin-bottom: 12px;
+      }
+
+      .screenshot-box p {
+        color: #718096;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      .qr-box {
+        background: #f7fafc;
+        border: 2px dashed #cbd5e0;
+        border-radius: 15px;
+        padding: 40px;
+        text-align: center;
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .qr-box i {
+        font-size: 4rem;
+        color: #a0aec0;
+        margin-bottom: 15px;
+      }
+
+      .qr-box p {
+        color: #718096;
+        margin: 0;
+        font-weight: 500;
+      }
+
+      .info-badges {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+      }
+
+      .badge-item {
+        background: #edf2f7;
+        padding: 10px 18px;
+        border-radius: 10px;
+        font-size: 0.95rem;
+        color: #4a5568;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .badge-item i {
+        font-size: 1.2rem;
+      }
+
+      .badge-item.google {
+        background: #e8f5e9;
+        color: #2e7d32;
+      }
+      .badge-item.apple {
+        background: #e3f2fd;
+        color: #1565c0;
+      }
+
+      .permission-list {
+        background: #f7fafc;
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 15px;
+      }
+
+      .permission-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .permission-item:last-child {
+        border-bottom: none;
+      }
+
+      .permission-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        flex-shrink: 0;
+      }
+
+      .permission-icon.camera {
+        background: #e3f2fd;
+        color: #1976d2;
+      }
+      .permission-icon.location {
+        background: #fce4ec;
+        color: #c2185b;
+      }
+      .permission-icon.bluetooth {
+        background: #e0f2f1;
+        color: #00897b;
+      }
+
+      .steps-flow {
+        background: #f7fafc;
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 15px;
+      }
+
+      .flow-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 12px 0;
+      }
+
+      .flow-number {
+        width: 35px;
+        height: 35px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      .alert-box {
+        background: #fffbeb;
+        border-left: 4px solid #f59e0b;
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      .alert-box h6 {
+        color: #92400e;
+        font-weight: 700;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .alert-box ul {
+        color: #78350f;
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .alert-box ul li {
+        margin-bottom: 8px;
+      }
+
+      .info-note {
+        background: #e0f2fe;
+        border-left: 4px solid #0284c7;
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin-top: 15px;
+        display: flex;
+        align-items: start;
+        gap: 12px;
+      }
+
+      .info-note i {
+        font-size: 1.3rem;
+        color: #0284c7;
+        margin-top: 2px;
+      }
+
+      .info-note p {
+        margin: 0;
+        color: #075985;
+      }
+
+      .success-note {
+        background: #dcfce7;
+        border-left: 4px solid #16a34a;
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin-top: 15px;
+        display: flex;
+        align-items: start;
+        gap: 12px;
+      }
+
+      .success-note i {
+        font-size: 1.3rem;
+        color: #16a34a;
+        margin-top: 2px;
+      }
+
+      .success-note p {
+        margin: 0;
+        color: #166534;
+      }
+
+      .charging-icon {
+        text-align: center;
+        padding: 30px;
+        background: linear-gradient(135deg, #dcfce7 0%, #d1fae5 100%);
+        border-radius: 15px;
+        margin-top: 20px;
+      }
+
+      .charging-icon i {
+        font-size: 5rem;
+        color: #16a34a;
+      }
+
+      .options-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .option-card {
+        background: #f7fafc;
+        border-radius: 12px;
+        padding: 20px;
+        border: 2px solid #e2e8f0;
+      }
+
+      .option-card h6 {
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 8px;
+      }
+
+      .option-card p {
+        color: #718096;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      .footer-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px 30px;
+        border-radius: 30px 30px 0 0;
+        margin: 50px -15px -20px -15px;
+        text-align: center;
+      }
+
+      .footer-section h5 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .footer-section p {
+        opacity: 0.9;
+        margin: 0;
+      }
+
+      @media (max-width: 768px) {
+        .screenshot-container {
+          flex-direction: column;
+        }
+
+        .options-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .step-container {
+          padding: 25px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Bước 1 -->
+      <div class="step-container">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <h2 class="step-title">Cài Đặt Ứng Dụng</h2>
+        </div>
+        <div class="step-content">
+          <p>
+            Nếu bạn chưa cài đặt App sạc điện Next Energy Vui lòng cài đặt chúng
+            Thông Qua QR Code bên dưới. Hoặc tải trực tiếp trên Google Play
+            Store (CH Play) hoặc IOS App Store.
+          </p>
+        </div>
+        <div class="info-badges">
+          <div class="badge-item google">
+            <i class="bi bi-google-play"></i>
+            <span>Google Play Store</span>
+          </div>
+          <div class="badge-item apple">
+            <i class="bi bi-apple"></i>
+            <span>iOS App Store</span>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-6 mb-3">
+            <div class="qr-box">
+              <img src="./InstructionImage/qr1.png" alt="" />
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="qr-box">
+              <img src="./InstructionImage/qr2.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bước 2 -->
+      <div class="step-container">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <h2 class="step-title">Chấp Nhận Điều Khoản</h2>
+        </div>
+        <div class="step-content">
+          <p>
+            Sau khi cài đặt xong và mở ứng dụng lần đầu, màn hình
+            <strong>điều khoản sử dụng</strong> sẽ hiển thị. Vui lòng đọc kỹ các
+            điều khoản trước khi nhấn <strong>"Đồng ý"</strong> để tiếp tục.
+          </p>
+        </div>
+        <div class="screenshot-container">
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b2_1.png"
+              style="width: 394px; height: 700px"
+            />
+          </div>
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b2_2.png"
+              style="width: 394px; height: 700px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Bước 3 -->
+      <div class="step-container">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <h2 class="step-title">Cấp Quyền Truy Cập</h2>
+        </div>
+        <div class="step-content">
+          <p>
+            Các màn hình tiếp theo là hướng dẫn sử dụng lần đầu, hướng dẫn sẽ
+            yêu cầu bạn cung cấp quyền truy cập Máy ảnh, bật chức năng Vị trí và
+            Bluetooth mỗi khi muốn sử dụng sạc.
+          </p>
+        </div>
+        <div class="permission-list">
+          <div class="permission-item">
+            <div class="permission-icon camera">
+              <i class="bi bi-camera"></i>
+            </div>
+            <div>
+              <strong>Máy ảnh</strong>
+              <p class="mb-0 text-muted">Để quét mã QR trên trụ sạc</p>
+            </div>
+          </div>
+          <div class="permission-item">
+            <div class="permission-icon location">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <div>
+              <strong>Vị trí</strong>
+              <p class="mb-0 text-muted">Tìm điểm sạc gần bạn nhất</p>
+            </div>
+          </div>
+          <div class="permission-item">
+            <div class="permission-icon bluetooth">
+              <i class="bi bi-bluetooth"></i>
+            </div>
+            <div>
+              <strong>Bluetooth</strong>
+              <p class="mb-0 text-muted">Kết nối với thiết bị sạc</p>
+            </div>
+          </div>
+        </div>
+        <div class="screenshot-container mt-4">
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b3_1.png"
+              style="width: 394px; height: 700px"
+            />
+          </div>
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b3_2.png"
+              style="width: 394px; height: 700px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Bước 4 -->
+      <div class="step-container">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <h2 class="step-title">Đăng Ký Tài Khoản</h2>
+        </div>
+        <div class="step-content">
+          <p>
+            Tiến hành đăng ký tài khoản bằng số điện thoại bạn đang sử dụng ->
+            xác thực tài khoản bằng OTP SMS. Sau khi xác thực tài khoản thành
+            công thì bạn có thể tiến hành điều khiển sạc.
+          </p>
+        </div>
+        <div class="steps-flow">
+          <div class="flow-item">
+            <div class="flow-number">1</div>
+            <span>Nhập số điện thoại bạn đang sử dụng</span>
+          </div>
+          <div class="flow-item">
+            <div class="flow-number">2</div>
+            <span>Nhận mã OTP qua tin nhắn SMS</span>
+          </div>
+          <div class="flow-item">
+            <div class="flow-number">3</div>
+            <span>Nhập mã OTP để xác thực</span>
+          </div>
+        </div>
+        <div class="info-note">
+          <i class="bi bi-info-circle-fill"></i>
+          <p>
+            Mã OTP sẽ được gửi đến số điện thoại bạn vừa nhập. Vui lòng kiểm tra
+            tin nhắn.
+          </p>
+        </div>
+        <div class="screenshot-container mt-4">
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b4_1.png"
+              style="width: 200px; height: 500px"
+            />
+          </div>
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b4_2.png"
+              style="width: 194px; height: 500px"
+            />
+          </div>
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b4_3.png"
+              style="width: 194px; height: 500px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Bước 5 -->
+      <div class="step-container">
+        <div class="step-header">
+          <div class="step-number">5</div>
+          <h2 class="step-title">Tìm Điểm Sạc Gần Bạn</h2>
+        </div>
+        <div class="step-content">
+          <p>
+            Đăng nhập tài khoản bằng số điện thoại đăng ký, người dùng sẽ được
+            đưa vào màn hình chính của ứng dụng, người dùng có thể tìm kiếm
+            thông tin trụ sạc và điểm sạc đang còn khả dụng, hướng dẫn tìm đường
+            đi đến điểm sạc.
+          </p>
+        </div>
+        <div class="permission-list">
+          <div class="permission-item">
+            <div
+              class="permission-icon"
+              style="background: #e0f2fe; color: #0284c7"
+            >
+              <i class="bi bi-search"></i>
+            </div>
+            <div>
+              <strong>Tìm kiếm trụ sạc</strong>
+              <p class="mb-0 text-muted">Xem thông tin chi tiết các điểm sạc</p>
+            </div>
+          </div>
+          <div class="permission-item">
+            <div
+              class="permission-icon"
+              style="background: #dcfce7; color: #16a34a"
+            >
+              <i class="bi bi-battery-charging"></i>
+            </div>
+            <div>
+              <strong>Kiểm tra khả dụng</strong>
+              <p class="mb-0 text-muted">Xem trụ nào đang trống và sẵn sàng</p>
+            </div>
+          </div>
+          <div class="permission-item">
+            <div
+              class="permission-icon"
+              style="background: #fef3c7; color: #ca8a04"
+            >
+              <i class="bi bi-compass"></i>
+            </div>
+            <div>
+              <strong>Chỉ đường</strong>
+              <p class="mb-0 text-muted">Dẫn đường đến điểm sạc bạn chọn</p>
+            </div>
+          </div>
+        </div>
+        <div class="screenshot-container mt-4">
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b5_1.png"
+              style="width: 394px; height: 500px"
+            />
+          </div>
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b5_2.png"
+              style="width: 394px; height: 700px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Bước 6 -->
+      <div class="step-container">
+        <div class="step-header">
+          <div class="step-number">6</div>
+          <h2 class="step-title">Kết Nối Với Trụ Sạc</h2>
+        </div>
+        <div class="step-content">
+          <p>
+            <strong>Lưu ý:</strong> cần kết nối dây cắm điện cho sạc cho thiết
+            bị tại ổ cắm
+          </p>
+        </div>
+        <div class="steps-flow">
+          <div class="flow-item">
+            <div class="flow-number">1</div>
+            <span>Mở App và chọn chức năng quét QR</span>
+          </div>
+          <div class="flow-item">
+            <div class="flow-number">2</div>
+            <span>Đưa camera đến mã QR trên trụ sạc bạn đang đứng.</span>
+          </div>
+          <div class="flow-item">
+            <div class="flow-number">3</div>
+            <span>Đảm bảo Bluetooth đã bật</span>
+          </div>
+          <div class="flow-item">
+            <div class="flow-number">4</div>
+            <span>Chờ App kết nối với trụ sạc</span>
+          </div>
+        </div>
+        <div class="screenshot-container mt-4">
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b6_1.png"
+              style="width: 394px; height: 700px"
+            />
+          </div>
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b6_2.png"
+              style="width: 394px; height: 700px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Bước 7 -->
+      <div class="step-container">
+        <div class="step-header">
+          <div class="step-number">7</div>
+          <h2 class="step-title">Kết Nối Thành Công</h2>
+        </div>
+        <div class="step-content">
+          <p>
+            Sau khi kết nối Bluetooth thành công. Hệ thống hiển thị thời gian
+            sạc tương ứng với số tiền.
+          </p>
+        </div>
+        <div class="screenshot-container">
+          <img
+            src="./InstructionImage/b7.png"
+            style="width: 394px; height: 700px"
+          />
+        </div>
+      </div>
+
+      <!-- Bước 8 -->
+      <div class="step-container">
+        <div class="step-header">
+          <div class="step-number">8</div>
+          <h2 class="step-title">Thanh Toán</h2>
+        </div>
+        <div class="step-content">
+          <p>
+            Tiến hành chọn thời gian sạc và thanh toán chi phí sạc thông qua
+            quét mã thanh toán QR Code.
+          </p>
+        </div>
+        <div class="success-note">
+          <i class="bi bi-credit-card-fill"></i>
+          <p>
+            <strong>Lưu ý:</strong> Trường hợp Bạn đã mua thẻ thành viên thì bỏ
+            qua bước quét QR Code thanh toán.
+          </p>
+        </div>
+        <div class="screenshot-container mt-4">
+          <img
+            src="./InstructionImage/b8.png"
+            style="width: 394px; height: 700px"
+          />
+        </div>
+      </div>
+
+      <!-- Bước 9 -->
+      <div class="step-container">
+        <div class="step-header">
+          <div class="step-number">9</div>
+          <h2 class="step-title">Bắt Đầu Sạc Điện</h2>
+        </div>
+        <div class="step-content">
+          <p>Sau khi thanh toán thì thiết bị sạc được kích hoạt.</p>
+        </div>
+        <div class="screenshot-container mt-4">
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b9_1.png"
+              style="width: 394px; height: 700px"
+            />
+          </div>
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b9_2.png"
+              style="width: 394px; height: 500px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Bước 10 -->
+      <div class="step-container">
+        <div class="step-header">
+          <div class="step-number">10</div>
+          <h2 class="step-title">Quản Lý Quá Trình Sạc</h2>
+        </div>
+        <div class="step-content">
+          <p>
+            Người dùng có thể tiếp tục sạc khi cảm thấy chưa đáp ứng đủ điện
+            năng, thì click chọn Thêm thời gian để kéo dài thời gian sạc. Hoặc
+            có thể kết thúc sớm quá trình sạc.
+          </p>
+        </div>
+        <div class="options-grid">
+          <div class="option-card">
+            <h6>
+              <i class="bi bi-plus-circle-fill" style="color: #16a34a"></i> Thêm
+              thời gian
+            </h6>
+            <p>
+              Nếu cần sạc thêm, bạn có thể gia hạn thêm thời gian mà không cần
+              dừng lại
+            </p>
+          </div>
+          <div class="option-card">
+            <h6>
+              <i class="bi bi-stop-circle-fill" style="color: #dc2626"></i> Kết
+              thúc sớm
+            </h6>
+            <p>Đã đủ điện? Bạn có thể kết thúc sạc sớm bất cứ lúc nào</p>
+          </div>
+        </div>
+        <div class="screenshot-container mt-4">
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b10_1.png"
+              style="width: 394px; height: 700px"
+            />
+          </div>
+          <div class="screenshot-box">
+            <img
+              src="./InstructionImage/b10_2.png"
+              style="width: 394px; height: 700px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Lưu ý quan trọng -->
+      <div class="step-container">
+        <div class="alert-box">
+          <h6>
+            <i class="bi bi-exclamation-triangle-fill"></i> Lưu Ý Khi Gặp Sự Cố
+          </h6>
+          <p style="color: #78350f; margin-bottom: 12px">
+            Nếu không thể kết nối được với trụ sạc, hãy kiểm tra các điều sau:
+          </p>
+          <ul>
+            <li>Kiểm tra kết nối WIFI/Internet của điện thoại</li>
+            <li>Đảm bảo dây sạc đã được cắm chặt vào xe</li>
+            <li>Xem đèn tín hiệu trên ổ cắm có sáng không</li>
+            <li>
+              Sau khi kiểm tra kỹ càng các thông số sạc. Vui lòng chờ đến thời
+              gian kết thúc Bạn nhé ! Chúc bạn có 1 trải nghiệm thoải mái.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
