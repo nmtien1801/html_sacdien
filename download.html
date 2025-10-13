@@ -3,696 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hướng Dẫn Sử Dụng App Next Energy</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Nexergy - Giải pháp trạm sạc xe điện thông minh</title>
-    <link rel="stylesheet" href="./css/screen.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/screen.css" />
+    <link rel="stylesheet" href="./css/Instructions.css" />
   </head>
   <body>
-    <!-- Header -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container">
-          <div class="d-flex align-items-center w-100 header-content">
-            <div class="logo">
-              <a href="#">
-                <img src="./images/logo.png" />
-              </a>
-            </div>
+      <div class="container row px-5 py-3 d-flex align-items-center">
+        <div class="logo col-12 col-md-4 mb-3 mb-md-0">
+          <a href="index.html">
+            <img src="./images/fulllogo_transparent_nobuffer.png" />
+          </a>
+        </div>
 
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="d-flex flex-column w-100">
-              <div class="header-top p-2">
-                <div class="contact-info">
-                  <div class="contact-label">TƯ VẤN VÀ CSKH</div>
-                  <div class="contact-number">📞 0914.77.88.99</div>
-                </div>
-                <div class="search-container">
-                  <input
-                    type="text"
-                    class="search-box"
-                    placeholder="Nhập từ khóa cần tìm"
-                  />
-                  <span class="search-icon">🔍</span>
-                </div>
-                <div class="language-switcher">
-                  <span class="active">VN</span>
-                  <span>|</span>
-                  <span>EN</span>
-                </div>
-              </div>
-              <div
-                class="header-bottom d-flex"
-                style="gap: 30px; margin-top: 10px"
+        <div class="col-8 col-md-7 mb-3 mb-md-0 header-top p-2">
+          <div class="d-flex gap-4">
+            <div class="contact-info">
+              <div class="contact-label">TƯ VẤN VÀ CSKH</div>
+              <div class="contact-number">📞 0914.77.88.99</div>
+            </div>
+            <div class="contact-info">
+              <div class="contact-label">|</div>
+            </div>
+            <div class="contact-info">
+              <a class="contact-label instruction" href="Instructions.html"
+                >HƯỚNG DẪN SỬ DỤNG</a
               >
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a id="giaipham" class="active hover-menu">Giải pháp</a>
-                  </li>
-                  <li><a id="visao" class="hover-menu">Lý do (Vì sao)</a></li>
-                  <li><a id="loiich" class="hover-menu">Lợi ích</a></li>
-                  <li><a id="doanhthu" class="hover-menu">Doanh thu</a></li>
-                  <li><a id="hoptac" class="hover-menu">Hợp tác</a></li>
-                  <li>
-                    <a id="maulapdat" class="hover-menu">Mẫu lắp đặt</a>
-                  </li>
-                  <li><a id="camnhan" class="hover-menu">Cảm nhận</a></li>
-                  <li><a id="lienhe" class="hover-menu">Liên hệ</a></li>
-                </ul>
-                <button class="btn-register register">
-                  Đăng ký hợp tác
-                </button>
-              </div>
             </div>
           </div>
         </div>
-      </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1>
-              GIẢI PHÁP TRẠM SẠC XE ĐIỆN THÔNG MINH THU NHẬP THỤ ĐỘNG CHO CHỦ
-              ĐỊA ĐIỂM
-            </h1>
-            <div class="hero-subtitle">NEXERGY</div>
-            <p style="margin-bottom: 30px; color: #ff8c00">
-              Trạm sạc xe điện sẵn sàng lắp đầy mọi điểm nóng đô thị
-            </p>
-            <button
-              type="button"
-              class="btn-primary register px-3 py-2 fw-semibold"
-            >
-              Đăng ký hợp tác ngay
-            </button>
-
-            <button type="button" class="btn-primary px-3 py-2 fw-semibold">
-              Xem doanh thu mẫu
-            </button>
-          </div>
-          <div class="hero-image">
-            <img src="./images/1_Giaiphap.jpg" alt="Trạm sạc xe điện" />
-          </div>
+        <div class="col-4 col-md-1 language-switcher">
+          <span class="active">VN</span>
+          <span>|</span>
+          <span>EN</span>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- Features Grid -->
     <div class="container">
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <img
-              src="./icon/5.png"
-              alt="Xuất khẩu nhật bản"
-              style="width: 40px; height: 40px"
-            />
-          </div>
-          <div>
-            <h3>Xuất khẩu nhật bản</h3>
-            <p>Vận hành từ 2022</p>
-          </div>
+      <!-- Bước 1 -->
+      <div class="step-container">
+        <div class="step-header">
+          <h2 class="step-title">Cài Đặt Ứng Dụng</h2>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <img
-              src="./icon/5.png"
-              alt="Xuất khẩu nhật bản"
-              style="width: 40px; height: 40px"
-            />
-          </div>
-          <div>
-            <h3>ISO 9001</h3>
-            <p>Tiêu chuẩn sản xuất</p>
-          </div>
+        <div class="step-content">
+          <p>
+            Nếu bạn chưa cài đặt App sạc điện Next Energy Vui lòng cài đặt chúng
+            Thông Qua QR Code bên dưới. Hoặc tải trực tiếp trên Google Play
+            Store (CH Play) hoặc IOS App Store.
+          </p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <img
-              src="./icon/5.png"
-              alt="Xuất khẩu nhật bản"
-              style="width: 40px; height: 40px"
-            />
-          </div>
-          <div>
-            <h3>App quản lý</h3>
-            <p>Doanh thu minh bạch</p>
-          </div>
+        <div class="info-badges">
+          <a
+            class="badge-item"
+            href="https://play.google.com/store/apps/details?id=vn.gbsofit.charger"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./images/google-play.jpg" alt="" />
+          </a>
+          <a
+            class="badge-item"
+            href="https://apps.apple.com/us/app/next-energy/id6752543790"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./images/app-store.jpg" alt="" />
+          </a>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <img
-              src="./icon/5.png"
-              alt="Xuất khẩu nhật bản"
-              style="width: 40px; height: 40px"
-            />
+        <div class="row mt-4">
+          <div class="col-md-6 mb-3">
+            <div class="qr-box">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://play.google.com/store/apps/details?id=vn.gbsofit.charger"
+                alt="QR Google Play"
+                class="qr-code"
+                style="width: 100%; height: auto"
+              />
+            </div>
           </div>
-          <div>
-            <h3>Lắp đặt 3 ngày</h3>
-            <p>Nhanh gọn an toàn</p>
+          <div class="col-md-6 mb-3">
+            <div class="qr-box">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://apps.apple.com/us/app/next-energy/id6752543790"
+                alt="QR App Store"
+                class="qr-code"
+                style="width: 100%; height: auto"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- About Section -->
-    <section class="section">
-      <div class="container">
-        <div id="gioithieu">
-          <div>
-            <h2 id="section-title">MÔ HÌNH & GIẢI PHÁP TOÀN DIỆN</h2>
-            <p style="margin-bottom: 20px; line-height: 1.8">
-              Trạm sạc thông minh phiên bản Việt hóa, đầy đủ phần cứng, phần mềm
-              quản lý và ứng dụng thanh toán. Thiết kế an toàn với bao vệ 2 lớp
-              quá dòng, cân bằng điện áp & ổn định pin. Gọn nhẹ - dễ lắp đặt ở
-              bất kỳ đâu.
-            </p>
-            <ul class="">
-              <li style="margin-bottom: 10px; line-height: 1.6">
-                Chi phí thấp & tiện lợi - chi từ 8,5 triệu/trạm (2 cổng).
-              </li>
-              <li style="margin-bottom: 10px; line-height: 1.6">
-                Tài chính linh hoạt - kết hợp ngân hàng cho vay vốn nếu cần.
-              </li>
-              <li style="margin-bottom: 10px; line-height: 1.6">
-                Sản xuất theo tiêu chuẩn ISO 9001.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="section" style="background: #f9f9f9">
-      <div class="container">
-        <h2 class="section-title why">VÌ SAO NÊN ĐẦU TƯ TRẠM NGAY BÂY GIỜ?</h2>
-        <div class="benefits-grid">
-          <div class="benefit-card">
-            <div class="number">
-              <img src="./icon/1.png" alt="" />
-            </div>
-            <h3>XE MÁY ĐIỆN BÙNG NỔ</h3>
-            <p>
-              ~3 triệu xe máy điện tại Việt Nam; Nhu cầu trạm sạc tăng mạnh.
-            </p>
-          </div>
-          <div class="benefit-card">
-            <div class="number"><img src="./icon/2.png" alt="" /></div>
-            <h3>THU HÚT KHÁCH MỚI</h3>
-            <p>
-              khách ưu tiên địa điểm có trạm sạc, tăng lưu lượng & thời gian lưu
-              trú.
-            </p>
-          </div>
-          <div class="benefit-card">
-            <div class="number"><img src="./icon/3.png" alt="" /></div>
-            <h3>PHÙ HỢP NHIỀU ĐỊA ĐIỂM</h3>
-            <p>
-              Nhà trọ, chung cư, bãi xe, quán cafe, gara, TTTM, khu vui chơi...
-            </p>
-          </div>
-          <div class="benefit-card">
-            <div class="number"><img src="./icon/4.png" alt="" /></div>
-            <h3>HOÀN VỐN NHANH</h3>
-            <p>Trung bình 4-5 tháng tùy lưu lượng sạc & nghành hàng đi kèm</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="section">
-      <div class="container">
-        <div class="bg-blur benefit">
-          <div class="process-cards">
-            <div class="process-card">
-              <div class="process-number">01</div>
-              <div class="process-content">
-                <h3>TĂNG THU NHẬP THỤ ĐỘNG</h3>
-                <p>
-                  Có thêm nguồn thu nhập thụ động ổn định hàng tháng từ mỗi lượt
-                  sạc, chia sẻ minh bạch.
-                </p>
-              </div>
-            </div>
-            <div class="process-card">
-              <div class="process-number">02</div>
-              <div class="process-content">
-                <h3>Giữ chân khách hàng</h3>
-                <p>
-                  Khách ở lại lâu hơn (30 - 120 phút/lượt sạc), tăng cơ hội mua
-                  thêm sản phẩm, đồ ăn, thức uống.
-                </p>
-              </div>
-            </div>
-            <div class="process-card">
-              <div class="process-number">03</div>
-              <div class="process-content">
-                <h3>TĂNG UY TÍN VÀ HÌNH ẢNH ĐỊA ĐIỂM</h3>
-                <p>
-                  Tăng uy tín và hình ảnh điểm bán: Thân thiện với người dùng xe
-                  điện, hiện đại, xanh.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="section pricing-section">
-      <div class="container">
-        <div class="pricing-grid">
-          <div style="color: #0a5f4f">
-            <h3 style="margin-bottom: 20px; font-size: 24px">
-              DOANH THU SẠC CON SỐ MINH HỌA
-            </h3>
-            <p style="font-weight: 600">
-              GIẢ ĐỊNH 1 BỘ SẠC (2 CỔNG), 10–12 LƯỢT/NGÀY:
-            </p>
-
-            <ul style="padding-left: 20px; font-weight: 600">
-              <li>
-                Doanh thu ròng: **2,7 – 3,6 triệu đ/tháng/bộ** sau chi phí điện,
-                bảo trì, vận hành.
-              </li>
-              <li>Dịch vụ đi kèm (VAS) giúp tăng thêm ~20% tổng doanh thu.</li>
-              <li>
-                Ví dụ: khách chi thêm 25.000 đ khi chờ sạc (12 lượt/ngày) ->
-                **+9 triệu đ/tháng** cho ngành hàng chính.
-              </li>
-            </ul>
-            <img
-              src="./images/4_doanh thu_1.jpg"
-              alt="Phân tích tài chính"
-              style="width: 100%; border-radius: 10px; margin-top: 20px"
-            />
-          </div>
-          <div>
-            <div>
-              <img
-                src="./images/1_Giaiphap.jpg"
-                alt="Phân tích tài chính"
-                style="width: 100%; height: 200px; border-radius: 10px"
-              />
-            </div>
-            <h3 style="color: #0a5f4f; margin: 20px 0; font-size: 24px">
-              CHI PHÍ ĐẦU TƯ DỰ KIẾN - KỲ HẠN 10 NĂM
-            </h3>
-            <div class="pricing-item">
-              <span>Chi phí thiết bị (3-5 trạm)</span>
-              <strong>3,5 - 5,5 tỷ đồng</strong>
-            </div>
-            <div class="pricing-item">
-              <span>Chi phí lắp đặt và hạ tầng</span>
-              <strong>800tr - 1,2 tỷ đồng</strong>
-            </div>
-            <div class="pricing-item">
-              <span>Chi phí vận hành/năm</span>
-              <strong>150 - 200tr đồng</strong>
-            </div>
-            <div class="pricing-item">
-              <span>Tổng chi phí 10 năm</span>
-              <strong>5,8 - 8,7 tỷ đồng</strong>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Commitment Section -->
-    <section class="section bg-Commitment">
-      <div class="container">
-        <h2 class="section-title">HỢP TÁC DỄ DÀNG - VẬN HÀNH TRỌN GÓI</h2>
-        <div class="commitment-grid">
-          <div class="commitment-card">
-            <img
-              src="./icon/6.png"
-              alt="Hỗ trợ lắp đặt nhanh"
-              style="margin-bottom: 15px"
-            />
-            <h3>HỖ TRỢ LẮP ĐẶT NHANH</h3>
-            <p>Khảo sát & hoàn thiện trong ~3 ngày kể từ khi chốt đơn.</p>
-          </div>
-          <div class="commitment-card">
-            <img src="./icon/7.png" style="margin-bottom: 15px" />
-            <h3>ĐÀO TẠO VÀ HƯỚNG DẪN</h3>
-            <p>Đào tạo nhân viên, cung cấp tài liệu hướng dẫn sử dụng</p>
-          </div>
-          <div class="commitment-card">
-            <img
-              src="./icon/8.png"
-              alt="bảo hành & bảo trì"
-              style="margin-bottom: 15px"
-            />
-            <h3>BẢO HÀNH & BẢO TRÌ</h3>
-            <p>1 đổi 1 năm đầu; kiểm tra định kỳ 3 tháng/lần; hỗ trợ 24/7.</p>
-          </div>
-          <div class="commitment-card">
-            <img src="./icon/9.png" style="margin-bottom: 15px" />
-            <h3>TRUYỀN THÔNG</h3>
-            <p>Hỗ trợ truyền thông, khuyễn mãi khai trương để kéo khách</p>
-          </div>
-        </div>
-
-        <div class="commitment-grid" style="margin-top: 30px">
-          <div class="commitment-card">
-            <h3>01 DOANH THU RÕ RÀNG</h3>
-            <p>
-              Doanh thu được tính rõ ràng chủ địa điểm có thể kiểm tra mỗi ngày
-              để đối chiếu và quản lý từ xa trên app.
-            </p>
-          </div>
-          <div class="commitment-card">
-            <h3>02 HỆ THỐNG BÁO CÁO</h3>
-            <p>
-              Chủ địa điểm được cấp quyền quản lý tất cả giao dịch được hiển thị
-              trên hệ thống báo cáo minh bạch, chủ điểm có thể theo dõi trực
-              tiếp.
-            </p>
-          </div>
-          <div class="commitment-card">
-            <h3>03 THANH TOÁN ĐỊNH KỲ</h3>
-            <p>
-              Thanh toán đúng hạn vào ngày 05 tây hàng tháng, đối soát định kỳ
-              hàng tháng.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Barrier System -->
-    <section class="section barrier-section">
-      <div class="container">
-        <div class="barrier-images">
-          <div>
-            <h5 class="section-title">HỆ THỐNG RÀO LẬP BẬT</h5>
-            <p style="margin-bottom: 30px; line-height: 1.8">
-              Giải pháp kiểm soát ra vào thông minh cho bãi đỗ xe và trạm sạc,
-              đảm bảo an ninh tối đa cho khu vực của bạn.
-            </p>
-          </div>
-          <img src="./images/6.jpg" alt="Rào chắn 1" />
-        </div>
-        <div class="barrier-diagram">
-          <img src="./images/lắp đặt.jpg" alt="Sơ đồ hệ thống" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Customer Service -->
-    <section class="section customer-service">
-      <div class="container">
-        <div class="service-content">
-          <div>
-            <h2 class="section-title-customer">
-              TRỞ THÀNH ĐIỂM SẠC TIÊN PHONG TẠI KHU VỰC CỦA BẠN
-            </h2>
-            <p style="margin-bottom: 20px; line-height: 1.8">
-              Gia nhập mạng lưới ENERGY để đón đầu xu thế xanh và tăng trưởng
-              bền vững cho địa điểm kinh doanh
-            </p>
-            <button
-              class="btn-primary"
-              style="margin-top: 30px; font-size: 16px; padding: 15px 40px"
-            >
-              Tìm hiểu thêm
-            </button>
-            <button
-              class="btn-primary"
-              style="margin-top: 30px; font-size: 16px; padding: 15px 40px"
-            >
-              Đồng ý ngay
-            </button>
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600"
-              alt="Đội ngũ tư vấn"
-              style="width: 100%; border-radius: 10px"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-      <div class="container">
-        <h2 class="testimonial-title">Cảm nhận từ khách hàng</h2>
-        <div class="testimonial-avatars">
-          <div class="avatar"></div>
-          <div class="avatar"></div>
-          <div class="avatar"></div>
-          <div class="avatar"></div>
-          <div class="avatar"></div>
-        </div>
-        <p style="color: #0a5f4f; max-width: 800px; margin: 10px auto">
-          Trạm sạc Nexergy luôn mang đến sự an tâm và tin tưởng tuyệt đối cho
-          cửa hàng tôi. Cảm ơn Trạm sạc đã có những ý tưởng cho sản phẩm hơn cả
-          mong đợi, tôi rất hài lòng và luôn đặt trọn niềm tin.
-        </p>
-        <p style="color: #0a5f4f; font-weight: 600">Chị Hà - Gò Vấp, TP. HCM</p>
-      </div>
-    </section>
-
-    <!-- Partners -->
-    <section class="section" style="background: #fff; padding: 40px 0">
-      <div class="partners">
-        <img src="./images/pantern.png" alt="Partner 1" class="partner-logo" />
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo-section">
-            <div class="footer-logo">
-              <img
-                src="./images/logo.png"
-                style="height: 200px; width: 200px"
-              />
-            </div>
-            <div style="font-size: 18px">GIẢI PHÁP CHO TRẠM SẠC XE ĐIỆN</div>
-            <div>
-              <p style="line-height: 1.9; margin-bottom: 15px; font-size: 12px">
-                93/9/45 Bờ Bao Tân Thắng, Phường Sơn Kỳ, Quận Tân Phú, TP. HCM
-                <br />
-                <strong>Hotline:</strong> 0914 77 88 99 (zalo)<br />
-                <strong>Website:</strong> nexegy.vn<br />
-                <strong>Email:</strong> cskh_nexegy@gmail.com
-              </p>
-            </div>
-            <div class="social-icons">
-              <div class="social-icon">f</div>
-              <div class="social-icon">in</div>
-              <div class="social-icon">tw</div>
-              <div class="social-icon">yt</div>
-              <div class="social-icon">ig</div>
-            </div>
-          </div>
-          <img
-            src="./images/1_Giaiphap.jpg"
-            alt="Footer Image"
-            style="width: 100%; border-radius: 10px"
-          />
-          <div class="footer-form">
-            <h3>Đăng ký nhận tư vấn</h3>
-            <p style="margin-bottom: 20px; opacity: 0.9">
-              Để lại thông tin để được tư vấn miễn phí về giải pháp trạm sạc phù
-              hợp nhất
-            </p>
-            <form>
-              <div class="form-group">
-                <label for="name">Họ và tên *</label>
-                <input
-                  type="text"
-                  id="name"
-                  placeholder="Nguyễn Văn A"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="phone">Số điện thoại *</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  placeholder="09xx.xxx.xxx"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="email">Email *</label>
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="ban@nexergay"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="message">Địa điểm & mô tả mặt bằng</label>
-                <textarea
-                  id="message"
-                  placeholder="Chung cư trung tâm xxx"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="btn-primary"
-                style="width: 100%; font-size: 16px; padding: 15px"
-              >
-                Đăng ký ngay
-              </button>
-            </form>
-            <span style="font-size: 12px; opacity: 0.7">
-              Bằng cách gửi, bạn đồng ý với điều khoản & chính sách bảo mật của
-              NEXERGY.
-            </span>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>
-            © 2025 Nexergy. All rights reserved. | Thiết kế bởi Nexergy Vietnam
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      // active menu
-      document.addEventListener("DOMContentLoaded", function () {
-        // Xử lý menu header-bottom
-        const menuLinks = document.querySelectorAll(".header-bottom ul a");
-        menuLinks.forEach((link) => {
-          link.addEventListener("click", function () {
-            menuLinks.forEach((item) => item.classList.remove("active"));
-            this.classList.add("active");
-          });
-        });
-
-        // Xử lý chuyển ngôn ngữ (VN | EN)
-        const langSwitcher = document.querySelectorAll(
-          ".language-switcher span"
-        );
-        langSwitcher.forEach((span) => {
-          span.addEventListener("click", function () {
-            if (this.textContent.trim() === "|") return;
-            langSwitcher.forEach((item) => item.classList.remove("active"));
-            this.classList.add("active");
-          });
-        });
-      });
-
-      // Smooth scroll
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-      });
-
-      // Khi bấm nút "Đăng ký hợp tác" thì cuộn tới cuối trang (footer)
-      document.querySelectorAll(".register").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const footer = document.querySelector("footer");
-          footer.scrollIntoView({ behavior: "smooth" });
-        });
-      });
-
-      // khi bấm nút "giải pháp" thì cuộn tới đầu trang (hero)
-      document.getElementById("giaipham").addEventListener("click", () => {
-        const hero = document.querySelector(".hero");
-        hero.scrollIntoView({ behavior: "smooth", block: "center" });
-      });
-      document.getElementById("visao").addEventListener("click", () => {
-        const section = document.querySelector(".why");
-        section.scrollIntoView({ behavior: "smooth", block: "center" });
-      });
-      document.getElementById("loiich").addEventListener("click", () => {
-        const section = document.querySelector(".benefit");
-        section.scrollIntoView({ behavior: "smooth", block: "center" });
-      });
-      document.getElementById("doanhthu").addEventListener("click", () => {
-        const section = document.querySelector(".pricing-section");
-        section.scrollIntoView({ behavior: "smooth", block: "center" });
-      });
-      document.getElementById("hoptac").addEventListener("click", () => {
-        const section = document.querySelector(".bg-Commitment");
-        section.scrollIntoView({ behavior: "smooth", block: "center" });
-      });
-      document.getElementById("maulapdat").addEventListener("click", () => {
-        const section = document.querySelector(".barrier-section");
-        section.scrollIntoView({ behavior: "smooth", block: "center" });
-      });
-      document.getElementById("camnhan").addEventListener("click", () => {
-        const section = document.querySelector(".testimonials");
-        section.scrollIntoView({ behavior: "smooth", block: "center" });
-      });
-      document.getElementById("lienhe").addEventListener("click", () => {
-        const footer = document.querySelector("footer");
-        footer.scrollIntoView({ behavior: "smooth", block: "center" });
-      });
-
-      // Form submission
-      document
-        .querySelector("footer form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          alert(
-            "Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất."
-          );
-          this.reset();
-        });
-
-      // -------------------------------- Add animation on scroll
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const observer = new IntersectionObserver(function (entries) {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      }, observerOptions);
-
-      document
-        .querySelectorAll(
-          ".feature-card, .benefit-card, .process-card, .commitment-card"
-        )
-        .forEach((el) => {
-          el.style.opacity = "0";
-          el.style.transform = "translateY(20px)";
-          el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-          observer.observe(el);
-        });
-    </script>
   </body>
+  <script>
+    // active menu
+    document.addEventListener("DOMContentLoaded", function () {
+      // Xử lý chuyển ngôn ngữ (VN | EN)
+      const langSwitcher = document.querySelectorAll(".language-switcher span");
+      langSwitcher.forEach((span) => {
+        span.addEventListener("click", function () {
+          if (this.textContent.trim() === "|") return;
+          langSwitcher.forEach((item) => item.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    });
+  </script>
 </html>
