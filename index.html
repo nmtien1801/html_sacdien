@@ -37,17 +37,17 @@
             </button>
           </div>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="d-flex flex-column w-100">
+            <div class="header-layout">
               <div class="header-top p-2">
-                <div class="d-flex gap-4">
+                <div class="menu-header-top">
                   <div class="contact-info">
                     <div class="contact-label">TƯ VẤN VÀ CSKH</div>
                     <div class="contact-number">📞 0972.74.73.74</div>
                   </div>
-                  <div class="contact-info">
+                  <div class="contact-info d-none d-lg-block">
                     <div class="contact-label">|</div>
                   </div>
-                  <div class="contact-info">
+                  <div class="contact-info ">
                     <a
                       class="contact-label instruction"
                       href="Instructions.html"
@@ -55,7 +55,7 @@
                     >
                   </div>
                 </div>
-                <div class="search-container">
+                <div class="search-container d-none d-lg-block">
                   <input
                     type="text"
                     class="search-box"
@@ -63,14 +63,14 @@
                   />
                   <span class="search-icon">🔍</span>
                 </div>
-                <div class="language-switcher">
+                <div class="language-switcher ">
                   <span class="active">VN</span>
                   <span>|</span>
                   <span>EN</span>
                 </div>
               </div>
               <div
-                class="header-bottom d-flex align-items-center"
+                class="header-bottom"
                 style="gap: 30px; margin-top: 10px"
               >
                 <ul class="navbar-nav">
@@ -736,6 +736,26 @@
           el.style.transform = "translateY(20px)";
           el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
           observer.observe(el);
+        });
+
+        // Lấy tham chiếu đến phần tử collapse
+        const navbarCollapse = document.getElementById('navbarNav');
+        // Tạo instance Bootstrap Collapse
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: false
+        });
+
+        // Bắt sự kiện click trên toàn bộ body => đóng navbarCollapse app
+        document.body.addEventListener('click', function(e) {
+            const isMenuOpen = navbarCollapse.classList.contains('show');
+            
+            if (isMenuOpen) {
+                const isClickInsideHeader = e.target.closest('header');
+                
+                if (!isClickInsideHeader) {
+                    bsCollapse.hide(); 
+                }
+            }
         });
     </script>
   </body>
