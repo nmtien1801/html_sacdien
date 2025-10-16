@@ -52,7 +52,7 @@
   box-sizing: border-box;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -110,10 +110,6 @@ header {
 
 .instruction {
   color: #ffa500;
-}
-
-.contact-info a {
-  text-decoration: none;
 }
 
 .contact-number {
@@ -258,6 +254,13 @@ nav a.active::after {
   }
 }
 
+.why {
+  scroll-margin-top: 130px;
+}
+.benefit {
+  scroll-margin-top: 120px;
+}
+
 /* Hero Section */
 .hero {
   background: #fff;
@@ -266,6 +269,7 @@ nav a.active::after {
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
+  scroll-margin-top: 120px;
 }
 
 .hero-content {
@@ -454,6 +458,7 @@ nav a.active::after {
 /* Pricing Table */
 .pricing-section {
   background: #f5f5f5;
+  scroll-margin-top: 120px;
 }
 
 .pricing-grid {
@@ -499,6 +504,7 @@ nav a.active::after {
 /* Barrier System */
 .barrier-section {
   background: #fff;
+  scroll-margin-top: 120px;
 }
 
 .barrier-images {
@@ -538,6 +544,7 @@ nav a.active::after {
 .testimonials {
   text-align: center;
   padding: 60px 0;
+  scroll-margin-top: 120px;
 }
 
 .testimonial-title {
@@ -554,10 +561,9 @@ nav a.active::after {
 }
 
 .avatar {
-  width: 80px;
+  width: auto;
   height: 80px;
   border-radius: 50%;
-  background: #ddd;
   border: 3px solid #fff;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
@@ -582,6 +588,7 @@ footer {
   background: #0a5f4f;
   color: #fff;
   padding: 60px 0 20px;
+  scroll-margin-top: 120px;
 }
 
 .footer-content {
@@ -659,7 +666,14 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 14px;
 }
-@media (max-width: 992px) {
+
+@media (min-width: 1821px) {
+}
+@media (min-width: 1440px) and (max-width: 1820px) {
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+}
+@media (min-width: 768px) and (max-width: 1023px) {
   .features-grid {
     gap: 15px;
     transform: scale(0.95);
@@ -679,9 +693,13 @@ footer {
   .feature-card p {
     font-size: 13px;
   }
+
+  .hero-text h1 {
+    font-size: 38px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .hero-content,
   .pricing-grid,
   .service-content,
@@ -752,7 +770,7 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .container {
     padding: 0 5px;
   }
@@ -773,6 +791,147 @@ footer {
   }
   .search-container {
     display: none !important;
+  }
+
+  .benefit {
+    scroll-margin-top: 98px;
+  }
+
+  .pricing-section {
+    scroll-margin-top: 98px;
+  }
+
+  .barrier-section {
+    scroll-margin-top: 98px;
+  }
+
+  .testimonials {
+    scroll-margin-top: 98px;
+  }
+  .footer-form {
+    scroll-margin-top: 98px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 479px) {
+  .service-content a {
+    font-size: 12px !important;
+  }
+
+  .contact-number {
+    font-size: 10px;
+  }
+  .contact-label {
+    font-size: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  #section-title {
+    font-size: 30px !important;
+  }
+
+  .section-title {
+    font-size: 30px !important;
+  }
+
+  .hero-text button {
+    font-size: 12px !important;
+  }
+
+  .feature-card h3 {
+    font-size: 12px;
+  }
+
+  .feature-card p {
+    font-size: 10px;
+  }
+
+  #gioithieu {
+    padding: 20px;
+  }
+
+  .benefit {
+    scroll-margin-top: 98px;
+  }
+
+  .pricing-section {
+    scroll-margin-top: 98px;
+  }
+
+  .barrier-section {
+    scroll-margin-top: 98px;
+  }
+
+  .testimonials {
+    scroll-margin-top: 98px;
+  }
+
+  .footer-form {
+    scroll-margin-top: 98px;
+  }
+}
+
+@media (max-width: 400px) {
+  .service-content a {
+    font-size: 12px !important;
+  }
+
+  .contact-number {
+    font-size: 10px;
+  }
+  .contact-label {
+    font-size: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  #section-title {
+    font-size: 30px !important;
+  }
+
+  .section-title {
+    font-size: 30px !important;
+  }
+
+  .hero-text button {
+    font-size: 12px !important;
+  }
+
+  .feature-card h3 {
+    font-size: 12px;
+  }
+
+  .feature-card p {
+    font-size: 10px;
+  }
+
+  #gioithieu {
+    padding: 20px;
+  }
+
+  .benefit {
+    scroll-margin-top: 98px;
+  }
+
+  .pricing-section {
+    scroll-margin-top: 98px;
+  }
+
+  .barrier-section {
+    scroll-margin-top: 98px;
+  }
+
+  .testimonials {
+    scroll-margin-top: 98px;
+  }
+
+  .footer-form {
+    scroll-margin-top: 98px;
   }
 }
 
@@ -800,6 +959,7 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  scroll-margin-top: 100px;
 }
 
 .section-title-customer {

@@ -42,7 +42,7 @@
                 <div class="d-flex gap-4">
                   <div class="contact-info">
                     <div class="contact-label">TƯ VẤN VÀ CSKH</div>
-                    <div class="contact-number">📞 0914.77.88.99</div>
+                    <div class="contact-number">📞 0972.74.73.74</div>
                   </div>
                   <div class="contact-info">
                     <div class="contact-label">|</div>
@@ -343,7 +343,7 @@
             </div>
             <div class="pricing-item">
               <span>Chi phí vận hành/tháng</span>
-              <strong>20% doanh thu</strong>
+              <strong>Thấp</strong>
             </div>
             <div class="pricing-item">
               <span>Tổng chi phí đầu tư</span>
@@ -477,12 +477,12 @@
     <section class="testimonials">
       <div class="container">
         <h2 class="testimonial-title">Cảm nhận từ khách hàng</h2>
-        <div class="testimonial-avatars">
-          <img src="./images/feew-cus-01.jpg" class="avatar" />
-          <img src="./images/feew-cus-02.jpg" class="avatar" />
-          <img src="./images/feew-cus-03.jpg" class="avatar" />
-          <img src="./images/feew-cus-04.jpg" class="avatar" />
-          <img src="./images/feew-cus-05.jpg" class="avatar" />
+        <div class="testimonial-avatars row">
+          <img src="./images/feew-cus-01.jpg" class="avatar col-2 col-md-auto" />
+          <img src="./images/feew-cus-02.jpg" class="avatar col-2 col-md-auto"/>
+          <img src="./images/feew-cus-03.jpg" class="avatar col-2 col-md-auto" />
+          <img src="./images/feew-cus-04.jpg" class="avatar col-2 col-md-auto" />
+          <img src="./images/feew-cus-05.jpg" class="avatar col-2 col-md-auto" />
         </div>
         <p style="color: #0a5f4f; max-width: 800px; margin: 10px auto">
           Trạm sạc Nexergy luôn mang đến sự an tâm và tin tưởng tuyệt đối cho
@@ -495,8 +495,8 @@
 
     <!-- Partners -->
     <section class="section" style="background: #fff; padding: 40px 0">
-      <div class="partners">
-        <img src="./images/pantern.png" alt="Partner 1" class="partner-logo" />
+      <div class="partners row">
+        <img src="./images/pantern.png" alt="Partner 1" class="partner-logo col-12" />
       </div>
     </section>
 
@@ -516,7 +516,7 @@
               <p style="line-height: 1.9; margin-bottom: 15px; font-size: 12px">
                 93/9/45 Bờ Bao Tân Thắng, Phường Sơn Kỳ, Quận Tân Phú, TP. HCM
                 <br />
-                <strong>Hotline:</strong> 0914 77 88 99 (zalo)<br />
+                <strong>Hotline:</strong> 0972 74 73 74 (zalo)<br />
                 <strong>Website:</strong> nexegy.vn<br />
                 <strong>Email:</strong> cskh_nexegy@gmail.com
               </p>
@@ -670,35 +670,35 @@
       // khi bấm nút "giải pháp" thì cuộn tới đầu trang (hero)
       document.getElementById("giaipham").addEventListener("click", () => {
         const hero = document.querySelector(".hero");
-        hero.scrollIntoView({ behavior: "smooth", block: "center" });
+        hero.scrollIntoView({ behavior: "smooth", block: "start" });
       });
       document.getElementById("visao").addEventListener("click", () => {
         const section = document.querySelector(".why");
-        section.scrollIntoView({ behavior: "smooth", block: "center" });
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
       });
       document.getElementById("loiich").addEventListener("click", () => {
         const section = document.querySelector(".benefit");
-        section.scrollIntoView({ behavior: "smooth", block: "center" });
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
       });
       document.getElementById("doanhthu").addEventListener("click", () => {
         const section = document.querySelector(".pricing-section");
-        section.scrollIntoView({ behavior: "smooth", block: "center" });
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
       });
       document.getElementById("hoptac").addEventListener("click", () => {
         const section = document.querySelector(".bg-Commitment");
-        section.scrollIntoView({ behavior: "smooth", block: "center" });
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
       });
       document.getElementById("maulapdat").addEventListener("click", () => {
         const section = document.querySelector(".barrier-section");
-        section.scrollIntoView({ behavior: "smooth", block: "center" });
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
       });
       document.getElementById("camnhan").addEventListener("click", () => {
         const section = document.querySelector(".testimonials");
-        section.scrollIntoView({ behavior: "smooth", block: "center" });
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
       });
       document.getElementById("lienhe").addEventListener("click", () => {
-        const footer = document.querySelector("footer");
-        footer.scrollIntoView({ behavior: "smooth", block: "center" });
+        const footer = document.querySelector(".footer-form");
+        footer.scrollIntoView({ behavior: "smooth", block: "start" });
       });
 
       // Form submission
